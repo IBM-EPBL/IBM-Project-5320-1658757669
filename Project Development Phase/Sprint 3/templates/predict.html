@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodDemandForecaster</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/icomoon.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/predictstyle.css">
+  </head>
+
+  <body class="goto-here">
+		<div class="py-1 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+91 1234567089</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">FDFC@email.com</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+						    <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="/index">FDFC</a>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="/index" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="/index1" class="nav-link">Predict</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+    <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item" style="background-image: url(../static/images/bg_3.jpg);">
+            <div class="center">
+                <h1>Demand Forecasting</h1>
+                <form action="/predict" method="post">
+                    <table>
+                        <tr>
+                          <th>
+                            <label style="float:left;">Home Page Featured</label>
+                            <select id="homepage_featured" name="homepage_featured" class = "ih-form-control" required style="float:left;">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            </select>
+                          </th>
+                          <th>
+                            <label style="float:right;">Emailer For Promotion</label>
+                            <select id="emailer_for_promotion" name="emailer_for_promotion" class = "ih-form-control" required style="float:right;">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            </select>
+                          </th>
+                        </tr>
+                      </table>
+                   <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Op Area</label>
+                  </div>   
+                  <label>Cuisine</label>
+                        <select id="cuisine"  name="cuisine" class = "ih-form-control" required>
+                            <option value="0">Continental</option>
+                            <option value="1">Indian</option>
+                            <option value="2">Italian</option>
+                            <option value="3">Thai</option>
+                        </select>
+                  <div class="txt_field">
+                    <input type="text" name="city_code" required>
+                    <span></span>
+                    <label>City Code</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="text" name="region_code" required>
+                    <span></span>
+                    <label>Region Code</label>
+                  </div>
+                  <label>Category</label>
+                        <select class = "ih-form-control" id="category" name="category" required>
+                            <option value="0">Beverages</option>
+                            <option value="1">Biryani</option>
+                            <option value="2">Desert</option>
+                            <option value="3">Extras</option>
+                            <option value="4">Fish</option>
+                            <option value="5">Other Snacks</option>
+                            <option value="6">Pasta</option>
+                            <option value="7">Pizza</option>
+                            <option value="8">Rice Bowl</option>
+                            <option value="9">Salad</option>
+                            <option value="10">Sandwich</option>
+                            <option value="11">Seafood</option>
+                            <option value="12">Soup</option>
+                            <option value="13">Starters</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Predict">
+                </form>
+              </div>
+              <diV class="pred center1">
+                <table>
+                    <tr>
+                        <th> Number of Orders:</th>
+                        <th> {{ prediction_text }}</th>
+                    </tr>
+                </table>
+                
+            </diV>
+	      </div>
+	    </div>
+    </section>
+     
+
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../static/js/jquery.waypoints.min.js"></script>
+  <script src="../static/js/jquery.stellar.min.js"></script>
+  <script src="../static/js/owl.carousel.min.js"></script>
+  <script src="../static/js/aos.js"></script>
+  <script src="../static/js/scrollax.min.js"></script>
+  <script src="../static/js/main.js"></script>
+    
+  </body>
+</html>
